@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Router } from 'react-router'
+import './App.css'
+import Home from './views/home/Home'
+import PropTypes from 'prop-types'
+import DocumentoDetail from './views/home/DocsDetail'
+import FormData from './views/home/FormularioData'
+import Inicio from './views/home/Inicio'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router history={ this.props.history }>
+        <div className="App">
+          <Route exact path="/" component={ Inicio }/>
+          <Route exact path="/home" component={ Home }/>
+          <Route path="/detail/:docuId" component={ DocumentoDetail }/>
+          <Route path="/subirDocs" component={FormData}/>
+        </div>
+      </Router>
     );
   }
+}
+App.propTypes = {
+  history: PropTypes.any.isRequired
 }
 
 export default App;
