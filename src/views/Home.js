@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { getDocumentos } from '../../actions'
+import { getDocumentos } from '../actions/index'
 import DocsPage from '../components/doc/DocsPage'
 import Buscar from '../components/buscar/Buscar'
+
+
+import Nav from '../views/Nav'
+
+
 import {
   Container,
   Row
@@ -30,14 +35,19 @@ class Home extends Component {
       })
     }
     return (
-      <Container>
-        <Buscar />
-        <section className="text-center my-5">
+      <div className="">
+        <div>
+          <Nav/>
+        </div>
+        <div style={{marginLeft:'12rem'}}>
+        <section className="text-center">
+          <Buscar /> 
           <Row>
             {documen}
           </Row>
         </section>
-      </Container>
+        </div>
+      </div>
     );
   }
 }

@@ -11,9 +11,9 @@ import {
 class Buscar extends Component {
     render() {
         return (
-            <Container>
+            <div>
                 <Col >
-                    <FormInline className="md-form mr-auto mb-4">
+                    <FormInline className="mb-4">
                         <input
                             className="form-control mr-sm-2"
                             type="text"
@@ -36,7 +36,7 @@ class Buscar extends Component {
                      </Button>
                     </FormInline>
                 </Col>
-            </Container>
+            </div>
         );
     }
 }

@@ -1,0 +1,143 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.app-title {
+  float: left;
+}
+
+.app-title a {
+  text-decoration: none;
+  line-height: 64px;
+  font-size: 21px;
+  display: inline-block;
+}
+
+.app-title a:hover {
+  text-decoration: none;
+}
+
+.app-header {
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 2px 8px #f0f1f2;
+  z-index: 10;
+  padding: 0;
+}
+
+.app-menu {
+  float: right;
+}
+
+.app-menu > li {
+  padding: 0 20px;
+}
+
+.app-menu > li > a {
+  padding: 0 20px;
+  margin: 0 -20px;
+}
+
+.app-menu > li > a > i {
+  margin-right: 0 !important;
+}
+
+.profile-dropdown-menu {
+  min-width: 180px;
+}
+
+.profile-menu .user-full-name-info {
+  font-size: 17px;
+  font-weight: 600;
+  color: rgba(0,0,0,0.85);
+}
+
+.profile-menu .username-info {
+  font-size: 14px;
+  color: rgba(0,0,0,0.65);
+}
+
+.dropdown-item {
+  padding: 10px 12px;
+}
+
+.dropdown-item a {
+  padding: 10px 12px;
+  margin: -10px -12px;
+}
+
+.nav-icon {
+  font-size: 20px;
+}
+
+.poll-icon {
+  margin-top: -4px;
+}
+
+@media (max-width: 768px) {
+.app-title a {
+  font-size: 20px;
+}
+
+.app-menu > li {
+  padding: 0 15px;
+}
+
+.app-menu > li > a {
+  padding: 0 15px;
+  margin: 0 -15px;
+}
+}  
+
+.server-error-page {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 40px;
+    border: 1px solid #c8c8c8; 
+    text-align: center;   
+}
+
+.server-error-page .server-error-title {
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+    color: #f44336;
+}
+
+.server-error-page .server-error-desc {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.server-error-go-back-btn {
+    min-width: 160px;
+}

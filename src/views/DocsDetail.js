@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { getDocumentosById } from '../../actions'
+import { getDocumentosById } from '../actions'
 import DocsDetailCover from '../components/doc/DocsDetailCover'
 import DocsDetailBody from '../components/doc/DocsDetailBody'
 

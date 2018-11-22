@@ -42,11 +42,20 @@ class DocsPage extends Component {
             return (<Redirect to={"detail/" + id} />);
         }
         return (
-            <Col lg="4" md="12" className="mb-lg-0 mb-4">
+            /**
+             * ---------------------------------------------------------
+             * 
+             * EL CARD SOLO CONTENDRA EL NOMBRE ICONO DETALLE Y FECHA
+             * 
+             * 
+             * --------------------------------------------------------
+             */
+            <div style={{maxHeight:'300px'}}>
+            <Col lg="6" md="12" className="mb-lg-0 mb-4">
                 <div style={{minWidth:'20rem', minHeight:'30rem'}}>
-                    <Card className="my-2">
+                    <Card className="my-5">
                         <CardBody>
-                            <h5 className="mb-4">{titulo}</h5>
+                            <h5 className="">{titulo}</h5>
                             <div className="d-flex justify-content-center">
                                 <div className="card-circle d-flex justify-content-center align-items-center">
                                     <Fa
@@ -57,26 +66,27 @@ class DocsPage extends Component {
                                 </div>
                             </div>
                             <Fa
-                                className="my-4"
+                                className="my-3"
                                 icon="plus-circle"
                                 fixed
                                 size="2x"
                                 onClick={this.onClick}
                             />
-                            <p className="grey-text">{descripcion}</p>
+                            {/* <p className="grey-text">{descripcion}</p>
                             <Button
                                 className="my-3"
                                 onClick={this.dowloadDocumento}>
                                 <Fa
                                     icon="cloud-download"
                                     size="2x" />
-                            </Button>
+                            </Button> */}
                         </CardBody>
                         <hr className="bg-info"/>
                         <p>{fechaCreacion}</p>
                     </Card>
                 </div>
             </Col>
+            </div>
         )
     }
 }
