@@ -4,7 +4,7 @@ import GoogleLogin from 'react-google-login'
 import { Redirect } from 'react-router-dom'
 
 class Login extends Component {
-  constructor(){
+  constructor() {
     super();
 
     this.state = {
@@ -46,35 +46,28 @@ class Login extends Component {
   }
   render() {
     if (this.state.isLogged) {
-      return(<Redirect to="/home/"/>);
+      return (<Redirect to="/home/" />);
     }
-    return(
+    return (
       <div className="Login">
-          <div className="Login-box">
-            <div className="card">
-              <div className="card-content">
-                <FacebookLogin
-                  appId="542628002825708"
-                  autoload={ false }
-                  fields="name, email, picture.width(120)"
-                  callback={ this.responseFacebook }
-                  onFailure={ this.onFailure }
-                  textButton="Facebook"
-                  cssClass="waves-effect waves-light btn blue darken-2"
-                  icon="fa-facebook"/>
-                <br/>
-                <GoogleLogin
-                  clientId="857159532308-v4ufrn5vu3l159u0n08crut88m19ok5j.apps.googleusercontent.com"
-                  autoLoad={ false }
-                  onSuccess={ this.responseGoogle }
-                  onFailure={ this.onFailure }
-                  className="waves-effect waves-light btn red lighten-1">
-                    <i className="google" aria-hidden="true"></i>
-                    <span>Iniciar Sesión</span>
-                </GoogleLogin>
-              </div>
-            </div>
-          </div>
+        <FacebookLogin
+          appId="542628002825708"
+          autoload={false}
+          fields="name, email, picture.width(120)"
+          callback={this.responseFacebook}
+          onFailure={this.onFailure}
+          textButton="Facebook"
+          cssClass="waves-effect waves-light btn blue darken-2"
+          icon="fa-facebook" />
+        <GoogleLogin
+          clientId="514166947873-a6n5l6gssk283um3o5244lj67sv6siau.apps.googleusercontent.com"
+          autoLoad={false}
+          onSuccess={this.responseGoogle}
+          onFailure={this.onFailure}
+          className="waves-effect waves-light btn lighten-1">
+          <i className="google" aria-hidden="true"></i>
+          <span>Iniciar Sesión</span>
+        </GoogleLogin>
       </div>
     );
   }

@@ -26,12 +26,19 @@ class Baner extends React.Component {
                 <Row className="d-flex flex-row justify-content-center row">
                   <a
                     className="border nav-link border-light rounded mr-1"
-                    href="https://www.tecsup.edu.pe/"
-                    target="_blank"
+                    href="/login"
                     rel="noopener noreferrer"
                   >
-                    <Fa icon="graduation-cap" className="mr-2" />
-                    Tecsup
+                    <Fa 
+                      icon="graduation-cap"
+                      className="mr-2"
+                      size="2x"
+                      />
+                   <span
+                    className="text-uppercase
+                       text-secondary
+                       "
+                    > Inicia Sesion</span>
                   </a>
                 </Row>
               </CardBody>
