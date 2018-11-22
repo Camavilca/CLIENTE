@@ -37,7 +37,7 @@ class Home extends Component {
     return (
       <div className="">
         <div>
-          {/* <Nav/> */}
+          <Nav/>
         </div>
         <div style={{marginLeft:'12rem'}}>
         <section className="text-center">
